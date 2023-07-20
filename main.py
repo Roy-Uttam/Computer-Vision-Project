@@ -17,11 +17,11 @@ def get_elements_from_docx(file_path):
 
 def mark_content_with_labels(paragraphs, images):
     for paragraph in paragraphs:
-        paragraph.text += "paragraph "
+        paragraph.text += "-[This is a paragraph]"
 
     for image in images:
         image._element.get_or_add_ln().get_or_add_solidFill().get_or_add_srgbClr().val = "FFFFFF00"
-        image.text += "image"
+        image.text += "-[This is a image]"
 
 if __name__ == "__main__":
 
